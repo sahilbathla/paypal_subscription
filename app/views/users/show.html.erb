@@ -1,0 +1,9 @@
+<h1>Welcome <%= current_user.email %></h1>
+<% unless current_user.try(:is_premium?) %>
+  <p>Wanna see more? Go premium </p>
+  <p><%=paypal_subscribe_form :image => "logo-paypal.png", :alt => "Button description"%></p>
+<% else %>
+  <br>
+  <%= link_to 'View Premium Page', premium_page_path(current_user) %>
+<% end %>
+
