@@ -20,6 +20,18 @@ PaypalSubscribe.setup do |config|
   # the allowable range for the units of duration that you specify with t3.
   config.p3 = 1
 
+  #no shipping address required for subscription
+  config.no_shipping = :none
+
+  #auto return url
+  # https://www.sandbox.paypal.com/us/cgi-bin/webscr?cmd=_profile-website-payments
+
+  # config.additional_values = lambda do |config|
+  #   config[:return] = 'http://google.com' 
+  #   return config
+  # end
+  
+
   # config.currency_code = 
 
   # Regular subscription units of duration.
@@ -31,6 +43,8 @@ PaypalSubscribe.setup do |config|
   #  M – for months; allowable range for p3 is 1 to 24
   #  Y – for years; allowable range for p3 is 1 to 5
   config.t3 = "M"
+
+  config.currency_code = "USD"
 
   # Recurring payments. Subscription payments recur unless subscribers cancel
   # their subscriptions before the end of the current billing cycle or you

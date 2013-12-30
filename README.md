@@ -1,12 +1,12 @@
 Paypal_subscription
 ===================
 
-Demo app of paypal subscription
+Demo app of paypal subscription(Tested on Rails 4.0)
 
 Summary
 ===================
 
-Only premium users of this application can view the premium page and to be a premium member you have to subscribe for the service via paypal
+Only premium users of this application can view the premium page and to be a premium member you have to <strong>subscribe</strong> for the service via paypal
 
 How to use
 ===================
@@ -17,6 +17,6 @@ How to use
 - run rails server on console
 - open browser and open http://localhost:3000
 
-P.S - I have currently used test email ids and this app is not yet tested on actual accounts
+P.S - I have currently used test email ids and this app is tested on paypal sandbox, it still needs to be tested on actual accounts
 
 

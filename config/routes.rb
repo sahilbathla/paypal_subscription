@@ -6,12 +6,16 @@ PaypalDemo::Application.routes.draw do
   
   root 'users#show'
 
-  match "/paypal/notify"  => "users#show",  :as => :paypal_notify, via: [:post, :get]
+  match "/paypal_subscription/notify"  => "paypal_subscriptions#notify",  :as => :paypal_notify, via: [:post, :get]
+
 
   resource :paypal_subscription, only: [] do
     get 'successful'
     get 'failure'
+    get 'notify'
   end
+
+  get "/paypal_subscription/successful/:token"  => "paypal_subscriptions#successful"
 
   # scope :module => "transactions" do
   #   match "/paypal/success" => "paypal#paypal_success", :as => :paypal_success, via: [:get, :post]
