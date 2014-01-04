@@ -53,7 +53,9 @@
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
-            <%= link_to 'Log Out', destroy_user_session_path,method: :delete, class:'r-align' %>
+            <% if current_user %>
+              <%= link_to 'Log Out', destroy_user_session_path,method: :delete, class:'r-align'  %>
+            <% end %>
           </div><!--/.nav-collapse -->
         </div>
       </div>
