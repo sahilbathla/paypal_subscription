@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -52,3 +52,13 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 #Paypal Subscription Integration
 gem 'paypal-subscribe'
+
+#For deployment
+#Posgres db
+gem 'pg'
+
+#for static asset serving
+gem 'rails_12factor', group: :production
+
+#ruby version
+ruby "1.9.3"
